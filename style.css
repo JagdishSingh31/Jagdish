@@ -1,0 +1,126 @@
+style>
+body{
+   width:100%;
+   margin:0;
+   
+   
+}
+    .header{
+        position:relative;
+        background:url('image/BG-weather.jpg')no-repeat;
+   background-size:100%;
+   height:450px;
+        
+    }
+.logo img{
+    border-radius:50px;
+    padding:20px;
+}
+    .header input{
+        position:relative;
+        top:10px;
+        left:20%;
+        padding:10px;
+        text-align:center;
+        font-size:20px;
+        width:500px;
+        border-radius:30px;
+        outline:none;
+        border:none;
+    }
+ .header button{
+    position:relative;
+    left:20%;
+    top:10px;
+    padding:10px;
+    width:150px;
+    }
+    .header .inner-header{
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.8);
+    }
+ .inner-header .Weather-details{
+     position:relative;
+     top:30px;
+     width:100%;
+     background:#fff;
+     height:250px;
+     border-radius:10px;
+     display:none;
+     
+ }
+ .Weather-details h3{
+     position:relative;
+     left:10px;
+     top:-10px;
+     
+ }
+ .Weather-details .columns{
+     position:relative;
+     margin:15px 15px;
+     padding:10px 10px;
+     top:-10px;
+     
+ }
+.columns ul{
+    position:relative;
+    top:-20px;
+    left:-15px;
+}
+.columns ul li{
+    display:inline;
+    font-size:30px;
+    padding:15px;
+}
+.rows ul{
+    position:relative;
+    top:20px;
+    left:-50px;
+    width:980px;
+}
+.rows ul li{
+    display:inline;
+    font-size:30px;
+    padding:42px;
+    margin:35px;
+}
+
+
+
+
+/*-------othercityweather----*/
+.container-center{
+   width:90vw;
+    max-width:1170px;
+    margin:0 auto;
+    padding-top:50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-column-gap:1.5rem;
+    grid-column-gap:2rem;  
+}
+.other-city{
+    width:250px;
+    height:235px;
+    margin-top:35px;
+    border:2px solid #fff;
+    box-shadow:8px 8px 5px #ccc;
+}
+.other-city img{
+    width:50px;
+    height:50px;
+}
+.other-city h4{
+    text-align:center;
+    font-size:20px;
+}
+.other-city ul{
+    position:relative;
+    left:-20px;
+    
+}
+.other-city ul li{
+    padding:10px 0;
+    list-style:none;
+}
