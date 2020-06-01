@@ -1,23 +1,23 @@
 
-var icon=document.createElement("img")
+var icon1=document.createElement("img")
 function WeatherCheck(){
 var input=document.getElementById("user").value;
-url=`http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=6e4f816c9f38537e748e7ce0f00c7d4e`;
+url=`http://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=6e4f816c9f38537e748e7ce0f00c7d4e`;
 
       fetch(url).then(function(response){
           return response.json()
       }).then(function(data){
       var city=data.name;
-       Temp=Math.floor(data.main.temp/10)
-       Temp_min=Math.floor(data.main.temp_min/10)
-      Temp_max=Math.floor(data.main.temp_max/10);
+       Temp=Math.floor(data.main.temp)
+       Temp_min=Math.floor(data.main.temp_min)
+      Temp_max=Math.floor(data.main.temp_max);
       var description=data.weather[0].description;
       des=data.weather[0].description
 var icon_code=data.weather[0].icon;
- icon.src=`http://openweathermap.org/img/wn/${icon_code}@2x.png`
+ icon1.src=`http://openweathermap.org/img/wn/${icon_code}@2x.png`
      document.getElementById("city-name").innerHTML="Name: "+city;
 
-document.getElementById("city-name").appendChild(icon);
+document.getElementById("city-name").appendChild(icon1);
 
      document.getElementById("Temp-value").innerHTML=Temp+'&deg;C';
      document.getElementById("Temp-min").innerHTML=Temp_min+'&deg;C';
@@ -29,7 +29,7 @@ document.getElementById("city-name").appendChild(icon);
      document.getElementById('Weather-box').style.display="block";
      
       }).catch(function(e){
-         error="Somthing went wrong "+e;
+         error="Somthing went wrong,please check your internet connection or retry "+e;
          document.getElementById("city-name").innerHTML=error;
          
          document.getElementById('Weather-box').style.display="block";
@@ -39,15 +39,15 @@ document.getElementById("city-name").appendChild(icon);
   
 //-------delhi weather-------//
 var icon2=document.createElement("img")
-var url="http://api.openweathermap.org/data/2.5/weather?q=delhi&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
+var url="http://api.openweathermap.org/data/2.5/weather?q=delhi&units=metric&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
 fetch(url).then((resolve)=>{
     return resolve.json()
 }).then((data)=>{
-   var temp=Math.floor(data.main.temp/10)
+   var temp=Math.floor(data.main.temp)
    
-  var min_temp=Math.floor(data.main.temp_min/10)
+  var min_temp=Math.floor(data.main.temp_min)
   
-  var max_temp=Math.floor(data.main.temp_max/10);
+  var max_temp=Math.floor(data.main.temp_max);
    
   var des=data.weather[0].description;
  var icon_code=data.weather[0].icon;
@@ -71,16 +71,16 @@ document.getElementById("del").appendChild(icon2);
 //-------NewYorkWeather-------//
 
 var icon3=document.createElement("img")
-var url="http://api.openweathermap.org/data/2.5/weather?q=new york&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
+var url="http://api.openweathermap.org/data/2.5/weather?q=new york&units=metric&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
 
 fetch(url).then((resolve)=>{
     return resolve.json()
 }).then((data)=>{
-   var temp=Math.floor(data.main.temp/10)
+   var temp=Math.floor(data.main.temp)
    
-  var min_temp=Math.floor(data.main.temp_min/10)
+  var min_temp=Math.floor(data.main.temp_min)
   
-  var max_temp=Math.floor(data.main.temp_max/10);
+  var max_temp=Math.floor(data.main.temp_max);
    
   var des=data.weather[0].description;
   
@@ -104,15 +104,15 @@ document.getElementById("NY").appendChild(icon3);
 //-------LondonWeather--------//
 
 var icon4=document.createElement("img")
-var url="http://api.openweathermap.org/data/2.5/weather?q=london&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
+var url="http://api.openweathermap.org/data/2.5/weather?q=london&units=metric&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
 fetch(url).then((resolve)=>{
     return resolve.json()
 }).then((data)=>{
-   var temp=Math.floor(data.main.temp/10)
+   var temp=Math.floor(data.main.temp)
    
-  var min_temp=Math.floor(data.main.temp_min/10)
+  var min_temp=Math.floor(data.main.temp_min)
   
-  var max_temp=Math.floor(data.main.temp_max/10);
+  var max_temp=Math.floor(data.main.temp_max);
   var des=data.weather[0].description;
    var icon_code=data.weather[0].icon;
 icon4.src=`http://openweathermap.org/img/wn/${icon_code}@2x.png`
@@ -133,15 +133,15 @@ document.getElementById("Lon").appendChild(icon4);
 //----------Hong Kong--------//
 var icon5=document.createElement("img")
 
-var url="http://api.openweathermap.org/data/2.5/weather?q=hong kong&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
+var url="http://api.openweathermap.org/data/2.5/weather?q=hong kong&units=metric&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
 fetch(url).then((resolve)=>{
     return resolve.json()
 }).then((data)=>{
-   var temp=Math.floor(data.main.temp/10)
+   var temp=Math.floor(data.main.temp)
    
-  var min_temp=Math.floor(data.main.temp_min/10)
+  var min_temp=Math.floor(data.main.temp_min)
   
-  var max_temp=Math.floor(data.main.temp_max/10);
+  var max_temp=Math.floor(data.main.temp_max);
   var des=data.weather[0].description;
     var icon_code=data.weather[0].icon;
 icon5.src=`http://openweathermap.org/img/wn/${icon_code}@2x.png`
@@ -161,15 +161,15 @@ document.getElementById("HK").appendChild(icon5);
 //-------sydneyWeather--------//
 
 var icon6=document.createElement("img")
-var url="http://api.openweathermap.org/data/2.5/weather?q=sydney&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
+var url="http://api.openweathermap.org/data/2.5/weather?q=sydney&units=metric&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
 fetch(url).then((resolve)=>{
     return resolve.json()
 }).then((data)=>{
-   var temp=Math.floor(data.main.temp/10)
+   var temp=Math.floor(data.main.temp)
    
-  var min_temp=Math.floor(data.main.temp_min/10)
+  var min_temp=Math.floor(data.main.temp_min)
   
-  var max_temp=Math.floor(data.main.temp_max/10);
+  var max_temp=Math.floor(data.main.temp_max);
   var des=data.weather[0].description;
     var icon_code=data.weather[0].icon;
 icon6.src=`http://openweathermap.org/img/wn/${icon_code}@2x.png`
@@ -193,15 +193,15 @@ document.getElementById("SY").appendChild(icon6);
 //---------DubaiWeather------//
 var icon7=document.createElement("img")
 
-var url="http://api.openweathermap.org/data/2.5/weather?q=dubai&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
+var url="http://api.openweathermap.org/data/2.5/weather?q=dubai&units=metric&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
 fetch(url).then((resolve)=>{
     return resolve.json()
 }).then((data)=>{
-   var temp=Math.floor(data.main.temp/10)
+   var temp=Math.floor(data.main.temp)
    
-  var min_temp=Math.floor(data.main.temp_min/10)
+  var min_temp=Math.floor(data.main.temp_min)
   
-  var max_temp=Math.floor(data.main.temp_max/10);
+  var max_temp=Math.floor(data.main.temp_max);
   var des=data.weather[0].description;
     var icon_code=data.weather[0].icon;
 icon7.src=`http://openweathermap.org/img/wn/${icon_code}@2x.png`
@@ -221,15 +221,15 @@ document.getElementById("DU").appendChild(icon7);
 //------WellingtonWeather-----//
 
 var icon8=document.createElement("img")
-var url="http://api.openweathermap.org/data/2.5/weather?q=Wellington&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
+var url="http://api.openweathermap.org/data/2.5/weather?q=Wellington&units=metric&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
 fetch(url).then((resolve)=>{
     return resolve.json()
 }).then((data)=>{
-   var temp=Math.floor(data.main.temp/10)
+   var temp=Math.floor(data.main.temp)
    
-  var min_temp=Math.floor(data.main.temp_min/10)
+  var min_temp=Math.floor(data.main.temp_min)
   
-  var max_temp=Math.floor(data.main.temp_max/10);
+  var max_temp=Math.floor(data.main.temp_max);
     
   var des=data.weather[0].description;
     var icon_code=data.weather[0].icon;
@@ -250,15 +250,15 @@ document.getElementById("Wel").appendChild(icon8);
 
 //--------ParisWeather--------//
 var icon9=document.createElement("img")
-var url="http://api.openweathermap.org/data/2.5/weather?q=paris&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
+var url="http://api.openweathermap.org/data/2.5/weather?q=paris&units=metric&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
 fetch(url).then((resolve)=>{
     return resolve.json()
 }).then((data)=>{
-   var temp=Math.floor(data.main.temp/10)
+   var temp=Math.floor(data.main.temp)
    
-  var min_temp=Math.floor(data.main.temp_min/10)
+  var min_temp=Math.floor(data.main.temp_min)
   
-  var max_temp=Math.floor(data.main.temp_max/10);
+  var max_temp=Math.floor(data.main.temp_max);
   var des=data.weather[0].description;
     var icon_code=data.weather[0].icon;
 icon9.src=`http://openweathermap.org/img/wn/${icon_code}@2x.png`
@@ -279,15 +279,15 @@ document.getElementById("Par").appendChild(icon9);
 //-------Capetown weather-----//
 
 var icon10=document.createElement("img")
-var url="http://api.openweathermap.org/data/2.5/weather?q=cape town&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
+var url="http://api.openweathermap.org/data/2.5/weather?q=cape town&units=metric&appid=6e4f816c9f38537e748e7ce0f00c7d4e"
 fetch(url).then((resolve)=>{
     return resolve.json()
 }).then((data)=>{
-   var temp=Math.floor(data.main.temp/10)
+   var temp=Math.floor(data.main.temp)
    
-  var min_temp=Math.floor(data.main.temp_min/10)
+  var min_temp=Math.floor(data.main.temp_min)
   
-  var max_temp=Math.floor(data.main.temp_max/10);
+  var max_temp=Math.floor(data.main.temp_max);
   var des=data.weather[0].description;
     var icon_code=data.weather[0].icon;
 icon10.src=`http://openweathermap.org/img/wn/${icon_code}@2x.png`
