@@ -1,7 +1,4 @@
 
-body{
-   width:100%;
-   margin:0;}
  
     .header{
         position:relative;
@@ -48,7 +45,6 @@ body{
      height:250px;
      border-radius:10px;
      display:none;
-     
  }
  .Weather-details h3{
      position:relative;
@@ -163,4 +159,90 @@ body{
     color:#fff;
     text-align:center;
     font-size:25px;
+}
+
+
+
+@media only screen and (max-width:360px){
+
+      .header{
+      position:relative;
+    width:100%;
+   background-size:500px 650px;
+  
+   }
+   .logo img{
+   position:relative;
+    top:-150px;
+}
+    
+ .header .inner-header{
+        height:500px;
+
+    }
+    .inner-header input{
+        position:absolute;
+     top:10px;
+     left:30px;
+     width:300px;
+     padding:5px;
+    }
+    
+    .inner-header button{
+        position:relative;
+        top:-20px;
+        left:100px;
+        
+    }
+    
+    
+ .inner-header .Weather-details{
+     top:-5px;
+     left:-20px;
+     height:370px;
+     
+ }
+ .Weather-details h3{
+     position:relative;
+     left:30px;
+     top:-5px;
+     
+ }
+ .columns ul{
+     top:-50px;
+ }
+ 
+ .columns ul li{
+    display:block;
+    left:-10px;
+    top:10px;
+    padding:20px 15px;
+    font-size:18px;
+}
+
+.rows ul{
+    position:relative;
+    top:-240px;
+    left:70px;
+    width:150px;
+}
+.rows ul li{
+    display:block;
+    font-size:22px;
+    padding:0;
+}
+ 
+.about-container{
+    position:relative;
+    width:100%;
+    padding:10px;
+    left:-50px;
+    
+}
+
+.footer{
+    padding:10px;
+}
+
+
 }
