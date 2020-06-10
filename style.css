@@ -44,7 +44,7 @@
      background:#fff;
      height:250px;
      border-radius:10px;
-     
+     display:none;
  }
  .Weather-details h3{
      position:relative;
@@ -199,7 +199,7 @@
  .inner-header .Weather-details{
      top:-5px;
      left:-20px;
-     height:350px;
+     height:370px;
      
  }
  .Weather-details h3{
@@ -208,12 +208,28 @@
      top:-5px;
      
  }
+ .columns ul{
+     top:-50px;
+ }
  
  .columns ul li{
     display:block;
     left:-10px;
-    font-size:30px;
-    padding:15px;
+    top:10px;
+    padding:20px 15px;
+    font-size:18px;
+}
+
+.rows ul{
+    position:relative;
+    top:-240px;
+    left:70px;
+    width:150px;
+}
+.rows ul li{
+    display:block;
+    font-size:22px;
+    padding:0;
 }
  
 .about-container{
